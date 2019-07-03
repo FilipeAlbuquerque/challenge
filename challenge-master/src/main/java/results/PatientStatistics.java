@@ -29,11 +29,11 @@ public class PatientStatistics {
 
     private int numberOfSickPatients(StateOfPatient stateOfPatients){
 
-        Long count = patients.stream()
-                .filter(x -> x.getState()
-                        .equals(stateOfPatients))
+        long count;
+        count = patients.stream()
+                .filter(x -> x.getState().equals(stateOfPatients))
                 .count();
 
-        return count.intValue();
+        return (int) count;
     }
 }
