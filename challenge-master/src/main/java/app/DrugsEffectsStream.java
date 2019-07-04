@@ -1,14 +1,14 @@
 package app;
 
 import domain.Medicine;
-import domain.DrugsEfects;
+import domain.DrugsEffects;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import static domain.DrugsEfects.*;
-import static java.util.Arrays.asList;
+import static domain.DrugsEffects.*;
 
 public class DrugsEffectsStream {
 
@@ -16,15 +16,15 @@ public class DrugsEffectsStream {
 
     private final List<Medicine> medicines;
 
-    private List<DrugsEfects> drugs = new ArrayList<>();
+    private List<DrugsEffects> drugs = new ArrayList<>();
 
     public DrugsEffectsStream(List<Medicine> medicines) {
         this.medicines = medicines;
     }
 
-    public List<DrugsEfects> get() {
+    public List<DrugsEffects> get() {
         if (containsAspirinAndParacetamol()) {
-            return asList(KILL);
+            return Collections.singletonList(KILL);
         }
         if (containsInsulinAndAntibiotic()) {
             drugs.add(HEALTHY_PEOPLE_CATCH_FEVER);

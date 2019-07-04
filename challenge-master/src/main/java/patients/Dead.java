@@ -2,7 +2,7 @@ package patients;
 
 import java.util.List;
 
-import domain.DrugsEfects;
+import domain.DrugsEffects;
 import domain.Patient;
 import domain.StateOfPatient;
 import static domain.StateOfPatient.DEAD;
@@ -15,8 +15,8 @@ public class Dead implements Patient {
     }
 
     @Override
-    public Patient reactTo(List<DrugsEfects> drugs) {
-        if (drugs.contains(DrugsEfects.RESURRECT)){
+    public Patient reactTo(List<DrugsEffects> drugs) {
+        if (drugs.contains(DrugsEffects.RESURRECT)){
             return new Healthy();
         }
 

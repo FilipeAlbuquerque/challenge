@@ -1,6 +1,6 @@
 package app;
 
-import domain.DrugsEfects;
+import domain.DrugsEffects;
 import domain.Medicine;
 import domain.Patient;
 
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class PatientsFutureSimulator {
 
-    List<DrugsEfects> drugs;
+    List<DrugsEffects> drugs;
     private List<Patient> patients;
 
     public PatientsFutureSimulator(List<Patient> patients, List<Medicine> medicines) {
